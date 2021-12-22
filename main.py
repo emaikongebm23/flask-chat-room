@@ -9,8 +9,15 @@ app.config['SECRET_KEY'] = hash_dig
 socketio = SocketIO(app)
 
 @app.route('/')
+def login():
+    return render_template('login_frm.html')
+
+@app.route('/main')
 def session():
-    
+    return render_template('index.html')
+
+def messageReceived(methods=['GET', 'POST']):
+    return 200, 'msg already received'
 
 if __name__ == '__main__':
     socketio.run(app, debug=True, port=80)
