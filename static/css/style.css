@@ -1,0 +1,42 @@
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+body{
+    margin: 0px;
+    height: 50%;
+}
+.header{
+    text-align: center;
+}
+.header-core{
+    text-decoration-line: none;
+    transition: 0.2;
+    background: linear-gradient(to left, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 10s ease-in-out infinite;
+    background-size: 400% 100%;
+    margin-top: 20%;
+    font-size: 45px;
+}
+.header-inner{
+    font-size: 18px;
+    color: black;
+}
+.link{
+    color: blue;
+    text-decoration: none;
+}
+.link:hover{
+    color: #0099ff;
+}
+.link::after{
+    color: #6666ff;
+}

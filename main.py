@@ -8,9 +8,13 @@ hash_dig = hash_obj.hexdigest()
 app.config['SECRET_KEY'] = hash_dig
 socketio = SocketIO(app)
 
+# @app.route('/')
+# def login():
+#     return render_template('login_frm.html')
+
 @app.route('/')
-def login():
-    return render_template('login_frm.html')
+def soon():
+    return render_template('soon.html')
 
 @app.route('/main')
 def session():
