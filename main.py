@@ -23,7 +23,7 @@ def session():
 def mesgReceived(methods=['GET', 'POST']):
     return 200, 'msg already received'
 
-@socketio.on('event')
+@socketio.on('evt')
 def event_handler(json, methods=['GET', 'POST']):
     socketio.emit('response_return', json, callback=msgReceived)
 if __name__ == '__main__':
