@@ -27,4 +27,4 @@ def mesgReceived(methods=['GET', 'POST']):
 def event_handler(json, methods=['GET', 'POST']):
     socketio.emit('response_return', json, callback=msgReceived)
 if __name__ == '__main__':
-    socketio.run(app, debug=True, port=80)
+    socketio.run(app, debug=True, port=8080)
